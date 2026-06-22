@@ -1,0 +1,38 @@
+# CLAUDE.md — darknessALP
+
+## Purpose
+Teaching codebase. The student audience is the primary constraint on every decision.
+
+## Language
+- Vanilla Python 3.10+ only. No third-party packages unless unavoidable and approved.
+- Standard library first. If you reach for `numpy`, stop and ask.
+
+## Style — strict PEP 8
+- 79-char line limit.
+- `snake_case` for everything (variables, functions, files). `UPPER_SNAKE` for module-level constants only.
+- One blank line between logical blocks inside a function; two between top-level definitions.
+- Run mentally through PEP 8 before proposing any code.
+
+## File / module layout
+- One function per file where practical. Files live in `src/darknessalp/`.
+- File name = function name (e.g. `compute_orbit.py` contains `compute_orbit()`).
+- `__init__.py` re-exports the public API; nothing else.
+- Tests mirror the source: `tests/test_compute_orbit.py` tests `compute_orbit()`.
+
+## Code length
+- Minimise character count. No padding, no boilerplate prose.
+- Docstrings: one short line — what it returns, not how it works.
+- Comments: one brief phrase; never a sentence that restates the code.
+- No blank placeholder comments, no TODO blocks, no verbose error messages.
+
+## I/O and arguments
+- Scripts that run standalone use `argparse` — brief `help=` strings only.
+- Print output only when the user asked for output. No debug prints left in.
+- File paths come in as arguments; never hardcoded.
+
+## What to avoid
+- Clever one-liners that sacrifice readability. Students read this.
+- Deep nesting. Flatten with early returns.
+- Classes unless state genuinely needs to travel. Functions first.
+- Abstract base classes, decorators, metaclasses — not in this repo.
+- Type annotations are optional; add them only if they clarify, not clutter.
