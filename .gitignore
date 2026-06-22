@@ -18,3 +18,6 @@ output/*
 *.webp
 
 !*.py
+
+# Reference material under docs/ should be tracked (e.g. papers for students)
+!docs/**
