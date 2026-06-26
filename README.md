@@ -15,12 +15,19 @@ This is a starting point, not a validated mission physics model.
 
 ## Quick start
 
-Create a virtual environment and install the package in editable mode:
+Create a virtual environment and install the working environment:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-python -m pip install -e .
+python -m pip install -r requirements.txt
+```
+
+If PowerShell blocks activation, use:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
 ```
 
 Run the example optimizer:
